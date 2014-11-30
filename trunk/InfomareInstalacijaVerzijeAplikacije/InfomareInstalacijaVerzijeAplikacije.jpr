@@ -46,6 +46,7 @@
    <value n="defaultPackage" v="hr.infomare.instalacija"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
+         <string v="JClient"/>
          <string v="Java"/>
       </list>
    </hash>
