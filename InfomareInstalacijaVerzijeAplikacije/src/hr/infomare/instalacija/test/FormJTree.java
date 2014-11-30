@@ -63,6 +63,10 @@ public class FormJTree extends javax.swing.JFrame {
            category.add(book);
         DefaultTreeModel treeModel = new DefaultTreeModel( top );
                        jTree1.setModel(treeModel);
+        for (int i = 0; i < jTree1.getRowCount(); i++) {
+            jTree1.expandRow(i);
+        }
+                       
     }
     /** This method is called from within the constructor to
      * initialize the form.
@@ -77,6 +81,7 @@ public class FormJTree extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTree1.setAutoscrolls(true);
         jScrollPane1.setViewportView(jTree1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
