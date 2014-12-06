@@ -80,7 +80,6 @@ public class Tester {
                 //ektenzijaDatoteke(datoteka.getName());
                 rbrDatoteke(datoteka.getName());
             }
-
         }
         /*
          * for (String s : listaDatoteka) {
