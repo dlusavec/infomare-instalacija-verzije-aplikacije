@@ -60,10 +60,18 @@
             <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons IO 2.4.library"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons dbutils 1.6.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
             <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons IO 2.4.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons dbutils 1.6.library"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
