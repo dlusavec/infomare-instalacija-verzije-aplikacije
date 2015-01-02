@@ -22,11 +22,11 @@ public class TesterApacheDBUtils {
         Pomocna.spojiSeNaBazu();
         //select();
         Skripta skripta = new Skripta();
-        skripta.setNaziv("10_backup.sql");
+        skripta.setNaziv("--komentar");
         skripta.setRbr(10);
         skripta.setTxt("CREATE TABLE FK001_12122014 AS SELECT * FROM FK001;");
-        // insert(skripta);
-        update(skripta);
+         insert(skripta);
+        //update(skripta);
     }
 
     public static void select() throws SQLException {
@@ -44,7 +44,7 @@ public class TesterApacheDBUtils {
     public static void insert(Skripta skripta) throws SQLException {
         QueryRunner qr = new QueryRunner();
         int i =
-            qr.update(Pomocna.getKonekcija(), "insert into skripta values (?,?,?)", skripta.getRbr(),
+            qr.update(Pomocna.getKonekcija(), "/*komentar*/insert into skripta values (?,?,?)--komentar", skripta.getRbr(),
                       skripta.getNaziv(), skripta.getTxt());
         Pomocna.getKonekcija().commit();
     }
@@ -54,6 +54,6 @@ public class TesterApacheDBUtils {
         int i =
             qr.update(Pomocna.getKonekcija(), "update skripta set naziv=? where rbr=?", skripta.getNaziv() + "update",
                       skripta.getRbr());
-        Pomocna.getKonekcija().commit();
+        Pomocna.getKonekcija().commit();        
     }
 }

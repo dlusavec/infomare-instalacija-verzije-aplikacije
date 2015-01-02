@@ -61,11 +61,15 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons dbutils 1.6.library"/>
+            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.61.library"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Rsyntaxtextarea 2.5.4.library"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -75,11 +79,15 @@
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons dbutils 1.6.library"/>
+            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.61.library"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
             <value n="id" v="Oracle JDBC"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Rsyntaxtextarea 2.5.4.library"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
