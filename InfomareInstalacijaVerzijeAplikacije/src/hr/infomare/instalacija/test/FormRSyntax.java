@@ -79,7 +79,7 @@ public class FormRSyntax extends javax.swing.JFrame {
         textArea.setText(sql);
         textArea.setFadeCurrentLineHighlight(true);
         textArea.setMarkOccurrences(true);
-        textArea.setEOLMarkersVisible(true);
+      //  textArea.setEOLMarkersVisible(true);
         textArea.setCaretPosition(0);    
         textArea.requestFocus();        
         setLocationRelativeTo(null);
