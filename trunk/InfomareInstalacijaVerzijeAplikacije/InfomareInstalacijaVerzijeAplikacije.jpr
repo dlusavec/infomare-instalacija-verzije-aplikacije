@@ -57,37 +57,37 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons IO 2.4.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.61.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Oracle JDBC"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Rsyntaxtextarea 2.5.4.library"/>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons IO 2.4.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Rsyntaxtextarea 2.5.4.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.6.library"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
       <list n="libraryReferences">
          <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons IO 2.4.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.61.library"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="Oracle JDBC"/>
             <value n="isJDK" v="false"/>
          </hash>
          <hash>
-            <url n="id" path="../../../../Users/damir/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Rsyntaxtextarea 2.5.4.library"/>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons IO 2.4.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Rsyntaxtextarea 2.5.4.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.6.library"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
