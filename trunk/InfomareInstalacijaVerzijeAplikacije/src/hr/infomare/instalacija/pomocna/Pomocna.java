@@ -14,28 +14,79 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 public class Pomocna {
-    private static Connection konekcija;
+    private static Connection konekcijaORA;
+    private static Connection konekcijaH2;
+    private static Connection konekcijaMS;
 
     public Pomocna() {
         super();
     }
 
-    public static void setKonekcija(Connection konekcija) {
-        Pomocna.konekcija = konekcija;
+    public static void setKonekcijaORA(Connection konekcija) {
+        Pomocna.konekcijaORA = konekcija;
     }
 
-    public static Connection getKonekcija() {
-        return konekcija;
+    public static Connection getKonekcijaORA() {
+        return konekcijaORA;
     }
 
-    public static void spojiSeNaBazu() {
+    public static void spojiSeNaBazuORA() {
         try {
-            konekcija = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "dbo", "mareinfo");
-            konekcija.setAutoCommit(false);
+            konekcijaORA = DriverManager.getConnection("jdbc:oracle:thin:@ora11:1521:orcl11", "dbo", "mareinfo");
+            konekcijaORA.setAutoCommit(false);
+            System.out.println("Spojen na ORA");
         } catch (SQLException e) {
             porukaError(null, e.getMessage());
         }
     }
+
+    public static Connection getKonekcijaMS() {
+        return konekcijaMS;
+    }
+
+    public static void setKonekcijaMS(Connection konekcija) {
+        Pomocna.konekcijaMS = konekcija;
+    }
+
+
+    public static void spojiSeNaBazuMS() {
+        try {
+            // jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos
+            konekcijaMS =
+                DriverManager.getConnection("jdbc:sqlserver://;servername=LEUT;databaseName=GPSDB;user=magicapp;password=infomare");
+            konekcijaMS.setAutoCommit(false);
+            System.out.println("Spojen na MS razvoj");
+        } catch (SQLException e) {
+            porukaError(null, e.getMessage());
+
+        }
+    }
+
+
+    public static void setKonekcijaH2(Connection konekcijaH2) {
+        Pomocna.konekcijaH2 = konekcijaH2;
+    }
+
+    public static Connection getKonekcijaH2() {
+        return konekcijaH2;
+    }
+
+    public static void spojiSeNaBazuH2() {
+        try {
+            Class.forName("org.h2.Driver");
+            String url = "jdbc:h2:" + "C:/Test/baza;TRACE_LEVEL_FILE=0";
+            String user = "damirl";
+            String password = "mareinfo";
+            konekcijaH2 = DriverManager.getConnection(url, user, password);
+            konekcijaH2.setAutoCommit(false);
+        } catch (SQLException ex) {
+            porukaError(null, ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            porukaError(null, ex.getMessage());
+        }
+
+    }
+
 
     public static void porukaInfo(Component c, String poruka) {
         JOptionPane.showMessageDialog(c, poruka, "Informacija", JOptionPane.INFORMATION_MESSAGE);
@@ -72,7 +123,7 @@ public class Pomocna {
         ResultSet rs = null;
 
         try {
-            upit = konekcija.prepareStatement(upitSQL);
+            upit = konekcijaORA.prepareStatement(upitSQL);
             rs = upit.executeQuery();
             while (rs.next()) {
                 comboBox.addItem(rs.getObject(1));
@@ -84,6 +135,6 @@ public class Pomocna {
             porukaError(null, e.getMessage());
         }
     }
-    
-    
+
+
 }

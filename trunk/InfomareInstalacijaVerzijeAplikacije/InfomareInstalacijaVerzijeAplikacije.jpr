@@ -72,6 +72,14 @@
             <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.6.library"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/SQL server JDBC.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/H2.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <list n="libraryReferences">
          <hash>
@@ -88,6 +96,14 @@
          </hash>
          <hash>
             <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/Commons DBUtils 1.6.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/SQL server JDBC.library"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <url n="id" path="../../../../Users/damirl/AppData/Roaming/JDeveloper/system12.1.2.0.40.66.68/o.jdeveloper/H2.library"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
