@@ -52,6 +52,7 @@ public class Tester {
         // ucitajMagicINI();
         Pomocna.spojiSeNaBazuMS();
         Pomocna.spojiSeNaBazuORA();
+        Pomocna.spojiSeNaBazuH2();
   /*      File src = new File("C:\\Skripte\\DB_32087");
         File dest = new File("C:\\Skripte\\Kopija");
         kopirajMapu(src, dest);

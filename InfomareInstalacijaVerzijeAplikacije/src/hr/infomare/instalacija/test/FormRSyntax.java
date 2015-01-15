@@ -3,18 +3,21 @@ package hr.infomare.instalacija.test;
 
 import java.awt.Frame;
 
+import org.apache.commons.lang3.StringUtils;
+
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rsyntaxtextarea.SyntaxConstants;
 import org.fife.ui.rtextarea.RTextScrollPane;
 import org.fife.ui.rtextarea.SearchContext;
 import org.fife.ui.rtextarea.SearchEngine;
+import org.fife.ui.rtextarea.SearchResult;
 
 /**
  *
  * @author damir
  */
 public class FormRSyntax extends javax.swing.JFrame {
-    RSyntaxTextArea textArea = new RSyntaxTextArea(20, 60);
+    RSyntaxTextArea editor = new RSyntaxTextArea(20, 60);
     RTextScrollPane sp;
     String sql =
         "/*Proca*/create or replace PROCEDURE sp_HR_PH110_31028\n" + "(\n" + "  p_Uprava IN CHAR DEFAULT NULL ,\n" +
@@ -68,20 +71,20 @@ public class FormRSyntax extends javax.swing.JFrame {
     /** Creates new form FormRSyntax */
     public FormRSyntax() {
         initComponents();
-        textArea.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_SQL);
-        textArea.setCodeFoldingEnabled(true);
-        textArea.setAntiAliasingEnabled(true);
+        editor.setSyntaxEditingStyle(SyntaxConstants.SYNTAX_STYLE_SQL);
+        editor.setCodeFoldingEnabled(true);
+        editor.setAntiAliasingEnabled(true);
 
-        sp = new RTextScrollPane(textArea);
+        sp = new RTextScrollPane(editor);
         sp.setFoldIndicatorEnabled(true);
         sp.setIconRowHeaderEnabled(true);
         jPanel1.add(sp);
-        textArea.setText(sql);
-        textArea.setFadeCurrentLineHighlight(true);
-        textArea.setMarkOccurrences(true);
-      //  textArea.setEOLMarkersVisible(true);
-        textArea.setCaretPosition(0);    
-        textArea.requestFocus();        
+        editor.setText(sql);
+        editor.setFadeCurrentLineHighlight(true);
+        editor.setMarkOccurrences(true);
+        //  textArea.setEOLMarkersVisible(true);
+        editor.setCaretPosition(0);
+        editor.requestFocus();
         setLocationRelativeTo(null);
     }
 
@@ -110,6 +113,12 @@ public class FormRSyntax extends javax.swing.JFrame {
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jtfTrazi.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jtfTraziFocusGained(evt);
             }
         });
 
@@ -161,15 +170,28 @@ public class FormRSyntax extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
-        SearchContext context = new SearchContext();
-        String text = jtfTrazi.getText().trim();
-        context.setSearchFor(text);
-        context.setMatchCase(false);
-        context.setRegularExpression(false);
-        context.setSearchForward(true);
-        context.setWholeWord(false);
-        SearchEngine.find(textArea, context);
+        SearchContext trazilica = new SearchContext();
+        String tekst = jtfTrazi.getText().trim();
+        if (StringUtils.isBlank(tekst))
+            return;
+        trazilica.setSearchFor(tekst);
+        trazilica.setMatchCase(false);
+        trazilica.setRegularExpression(false);
+        trazilica.setSearchForward(true);
+        trazilica.setWholeWord(false);
+        SearchResult sr = SearchEngine.find(editor, trazilica);
+        if (!sr.wasFound()) {            
+            editor.setCaretPosition(0);
+            SearchEngine.find(editor, trazilica);
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jtfTraziFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfTraziFocusGained
+        // TODO add your handling code here:
+        jtfTrazi.selectAll();
+    }//GEN-LAST:event_jtfTraziFocusGained
 
     /**
      * @param args the command line arguments
