@@ -2,6 +2,8 @@ package hr.infomare.instalacija.test;
 
 import hr.infomare.instalacija.pojo.Skripta;
 
+import hr.infomare.instalacija.pomocna.Pomocna;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -48,10 +50,12 @@ public class Tester {
        }*/
         //System.out.println(dodajSlashNaStazuMape("C:\\Skripte\\DB_32087"));
         // ucitajMagicINI();
-        File src = new File("C:\\Skripte\\DB_32087");
+        Pomocna.spojiSeNaBazuMS();
+        Pomocna.spojiSeNaBazuORA();
+  /*      File src = new File("C:\\Skripte\\DB_32087");
         File dest = new File("C:\\Skripte\\Kopija");
         kopirajMapu(src, dest);
-
+*/
     }
 
     public static String ucitajDatotekuUString(String datoteka) throws FileNotFoundException,

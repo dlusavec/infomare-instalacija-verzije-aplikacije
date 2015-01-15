@@ -19,7 +19,7 @@ public class TesterApacheDBUtils {
 
     public static void main(String[] args) throws SQLException {
         TesterApacheDBUtils testerApacheDBUtils = new TesterApacheDBUtils();
-        Pomocna.spojiSeNaBazu();
+        Pomocna.spojiSeNaBazuORA();
         //select();
         Skripta skripta = new Skripta();
         skripta.setNaziv("--komentar");
@@ -35,7 +35,7 @@ public class TesterApacheDBUtils {
         String upitSQL =
             "SELECT VALUTA,  GODINA,  MJESEC,  DAN,  KUPOVNI,  SREDNJI,  PRODAJNI FROM TECAJ WHERE " +
             "VALUTA=? AND GODINA =? AND MJESEC =?";
-        List<Tecaj> listaTecaja = qr.query(Pomocna.getKonekcija(), upitSQL, rsh, new Object[] { "EUR", 2014, 1 });
+        List<Tecaj> listaTecaja = qr.query(Pomocna.getKonekcijaORA(), upitSQL, rsh, new Object[] { "EUR", 2014, 1 });
         for (Tecaj tecaj : listaTecaja) {
             System.out.println(tecaj.getDan().toString() + " kupovni->>" + tecaj.getKupovni());
         }
@@ -44,16 +44,16 @@ public class TesterApacheDBUtils {
     public static void insert(Skripta skripta) throws SQLException {
         QueryRunner qr = new QueryRunner();
         int i =
-            qr.update(Pomocna.getKonekcija(), "/*komentar*/insert into skripta values (?,?,?)--komentar", skripta.getRbr(),
+            qr.update(Pomocna.getKonekcijaORA(), "/*komentar*/insert into skripta values (?,?,?)--komentar", skripta.getRbr(),
                       skripta.getNaziv(), skripta.getTxt());
-        Pomocna.getKonekcija().commit();
+        Pomocna.getKonekcijaORA().commit();
     }
 
     public static void update(Skripta skripta) throws SQLException {
         QueryRunner qr = new QueryRunner();
         int i =
-            qr.update(Pomocna.getKonekcija(), "update skripta set naziv=? where rbr=?", skripta.getNaziv() + "update",
+            qr.update(Pomocna.getKonekcijaORA(), "update skripta set naziv=? where rbr=?", skripta.getNaziv() + "update",
                       skripta.getRbr());
-        Pomocna.getKonekcija().commit();        
+        Pomocna.getKonekcijaORA().commit();        
     }
 }
