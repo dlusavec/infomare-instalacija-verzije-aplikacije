@@ -51,7 +51,7 @@ public class Pomocna {
 
     public static void spojiSeNaBazuMS() {
         try {
-            // jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos
+            // jdbc:sqlserver://;servername=server_name;integratedSecurity=true
             konekcijaMS =
                 DriverManager.getConnection("jdbc:sqlserver://;servername=LEUT;databaseName=GPSDB;user=magicapp;password=infomare");
             konekcijaMS.setAutoCommit(false);
@@ -74,11 +74,12 @@ public class Pomocna {
     public static void spojiSeNaBazuH2() {
         try {
             Class.forName("org.h2.Driver");
-            String url = "jdbc:h2:" + "C:/Test/baza;TRACE_LEVEL_FILE=0";
+            String url = "jdbc:h2:" + "baza;TRACE_LEVEL_FILE=0";
             String user = "damirl";
             String password = "mareinfo";
             konekcijaH2 = DriverManager.getConnection(url, user, password);
             konekcijaH2.setAutoCommit(false);
+            System.out.println("Spojen na H2");
         } catch (SQLException ex) {
             porukaError(null, ex.getMessage());
         } catch (ClassNotFoundException ex) {
