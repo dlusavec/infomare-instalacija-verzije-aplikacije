@@ -180,7 +180,7 @@ public class FormRSyntax extends javax.swing.JFrame {
         trazilica.setSearchForward(true);
         trazilica.setWholeWord(false);
         SearchResult sr = SearchEngine.find(editor, trazilica);
-        if (!sr.wasFound()) {            
+        if (!sr.wasFound()) {
             editor.setCaretPosition(0);
             SearchEngine.find(editor, trazilica);
         }
